@@ -53,6 +53,7 @@ import { CommerceContextProvider } from './CommerceContext';
 import styles from './App.module.scss';
 import { Meta } from './Meta';
 import { CommerceConfig } from '../src/utils';
+import { BeautyHeader } from './BeautyHeader/BeautyHeader';
 
 interface AppProps {
   configuration: Omit<Configuration, 'httpClient'>;
@@ -75,6 +76,7 @@ export function App({
   const mapping = {
     BannerCollection,
     BannerCTA,
+    BeautyHeader,
     CategoryHighlight,
     Content,
     ContentPage,
@@ -137,52 +139,13 @@ export function App({
             <BrPageContext.Consumer>
               {(contextPage) => (<>
                 <Meta page={contextPage!} />
-                <header>
-                  <Navbar bg="light" expand="lg" sticky="top" className="py-2 py-lg-3">
-                    <Container className="justify-content-start px-sm-3">
-                      <Navbar.Brand as={Link} href={contextPage?.getUrl('/')} title="Pacific Nuts & Bolts">
-                        <Image
-                          alt="Pacific Nuts & Bolts"
-                          src="/logo.png"
-                          srcSet="/logo.png 1x, /logo@2x.png 2x"
-                          height="30"
-                          className="d-none d-sm-block"
-                        />
 
-                        <Image
-                          alt="Pacific Nuts & Bolts"
-                          src="/logo-sm.png"
-                          srcSet="/logo-sm.png 1x, /logo-sm@2x.png 2x"
-                          height="30"
-                          className="d-block d-sm-none"
-                        />
-                        {getCookieConsentValue() && <BrPixel
-                          accountId={discoveryAccountId ?? ''}
-                          domainKey={discoveryDomainKey ?? ''}
-                          page={contextPage!}
-                          pageType="search"
-                          pageLabels="pacific,nut,bolt,commerce"
-                          type="pageview"
-                        />}
-                      </Navbar.Brand>
-                      {!contextPage?.getUrl()?.startsWith('/error') && (
-                        <>
-                          <BrComponent path="header">
-                            <div className={`${styles.navbar__container} order-lg-2 mr-3 mr-lg-0`}>
-                              <BrComponent />
-                            </div>
-                          </BrComponent>
-                          <Navbar.Toggle className="ml-auto" />
-                          <Navbar.Collapse className="order-lg-1 mr-lg-3">
-                            <BrComponent path="menu">
-                              <Menu />
-                            </BrComponent>
-                          </Navbar.Collapse>
-                        </>
-                      )}
-                    </Container>
-                  </Navbar>
-                </header>
+                <BrComponent path="header">
+                  <div>
+                    <BrComponent />
+                  </div>
+                </BrComponent>
+
               <BrComponent path="top">
                 <Container as="section" fluid>
                   <BrComponent />
