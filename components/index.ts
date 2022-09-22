@@ -20,6 +20,7 @@ export * from './BrCookieConsent';
 export * from './BrPixel';
 export * from './BrRichTextContent';
 export * from './BeautyHeader';
+export * from './ColorsUsed';
 export * from './CategoryHighlight';
 export * from './Content';
 export * from './ContentPage';

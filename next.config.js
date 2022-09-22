@@ -20,4 +20,7 @@ module.exports = {
     // Only run ESLint on these directories during production builds (next build)
     dirs: ['components', 'pages', 'src'],
   },
+  images: {
+    domains: ['trial-7olu3gpe.bloomreach.io'],
+  },
 };

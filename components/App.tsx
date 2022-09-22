@@ -29,6 +29,7 @@ import {
   BrCookieConsent,
   BeautyHeader,
   CategoryHighlight,
+  ColorsUsed,
   Content,
   ContentPage,
   Images,
@@ -95,6 +96,7 @@ export function App({
     subheader,
     TitleAndText,
     Video,
+    'colors-used': ColorsUsed,
   };
 
   const updateCookieConsentVal = (val: boolean): void => {
