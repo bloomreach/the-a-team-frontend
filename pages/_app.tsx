@@ -17,13 +17,11 @@
 import App, { AppContext, AppInitialProps } from 'next/app';
 import Head from 'next/head';
 import { AppTreeType } from 'next/dist/shared/lib/utils';
-import { config } from '@fortawesome/fontawesome-svg-core';
 
-import '@fortawesome/fontawesome-svg-core/styles.css';
-import 'bootstrap/scss/bootstrap.scss';
-import './_index.scss';
-
-config.autoAddCss = false;
+import './_reset.scss';
+import './_default.scss';
+import './_style.scss';
+import './_home.scss';
 
 export default class MyApp extends App {
   static AppTree: AppTreeType;
@@ -55,8 +53,10 @@ export default class MyApp extends App {
           <link rel="manifest" href="/manifest.json" />
           <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         </Head>
-        <div className="d-flex flex-column vh-100">
-          <Component {...pageProps} />
+        <div className="home-container">
+          <div className="home-pacific-beauty-landingpage-personalized">
+            <Component {...pageProps} />
+          </div>
         </div>
       </>
     );
