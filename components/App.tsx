@@ -23,6 +23,7 @@ import { getCookieConsentValue } from 'react-cookie-consent';
 import { useMemo, useState } from 'react';
 import { CommerceApiClientFactory, CommerceConnectorProvider } from '@bloomreach/connector-components-react';
 import { Cookies, CookiesProvider } from 'react-cookie';
+import { initializeSegmentation } from '@bloomreach/segmentation';
 import {
   BannerCollection,
   BannerCTA,
@@ -128,6 +129,11 @@ export function App({
   }, [graphqlServiceUrl, connector, accountEnvId, defaultRequestHeaders, defaultAnonymousCredentials]);
 
   const reactCookies = cookies ? new Cookies(cookies) : undefined;
+
+  initializeSegmentation({
+    projectToken: 'bdf1fa20-32aa-11ed-abd8-522f64a49849',
+    targetURL: 'https://cloud-api.exponea.com',
+  });
 
   return (
     <CookiesProvider cookies={reactCookies}>
