@@ -1272,7 +1272,7 @@
   background-color: rgba(255, 255, 255, 1);
 }
 .home-frame607 {
-  width: 496px;
+  width: 992px;
   display: flex;
   position: relative;
   box-sizing: border-box;
@@ -1282,8 +1282,15 @@
   margin-right: 1px;
   border-radius: 0px 0px 0px 0px;
   margin-bottom: 0;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
+.home-frame605-dude {
+  display: flex;
+  min-width: 496px;
+  max-width: 496px;
+}
+
 .home-frame605 {
   display: flex;
   padding: 20px;

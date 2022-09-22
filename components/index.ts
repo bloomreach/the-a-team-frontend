@@ -29,6 +29,7 @@ export * from './Images';
 export * from './Map';
 export * from './Menu';
 export * from './MultiBannerCarousel';
+export * from './MultipleTitleAndText';
 export * from './Navigation';
 export * from './PageCatalog';
 export * from './PathwaysRecommendations';

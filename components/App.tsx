@@ -36,6 +36,7 @@ import {
   Map,
   Menu,
   MultiBannerCarousel,
+  MultipleTitleAndText,
   Navigation,
   PageCatalog,
   PathwaysRecommendations,
@@ -97,6 +98,7 @@ export function App({
     TitleAndText,
     Video,
     'colors-used': ColorsUsed,
+    multipletitleandtext: MultipleTitleAndText,
   };
 
   const updateCookieConsentVal = (val: boolean): void => {
