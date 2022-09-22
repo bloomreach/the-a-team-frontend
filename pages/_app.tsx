@@ -52,6 +52,7 @@ export default class MyApp extends App {
           <link rel="apple-touch-icon" href="/logo@2x.png" />
           <link rel="manifest" href="/manifest.json" />
           <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+          <script src="/engagement.js" async />
         </Head>
         <div className="home-container">
           <div className="home-pacific-beauty-landingpage-personalized">
