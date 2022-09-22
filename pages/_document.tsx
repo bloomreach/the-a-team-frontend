@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /*
  * Copyright 2022 Bloomreach
  *
