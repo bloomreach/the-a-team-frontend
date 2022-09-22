@@ -27,11 +27,10 @@ import {
   BannerCollection,
   BannerCTA,
   BrCookieConsent,
-  BrPixel,
+  BeautyHeader,
   CategoryHighlight,
   Content,
   ContentPage,
-  Link,
   Images,
   Map,
   Menu,
@@ -45,6 +44,7 @@ import {
   SearchBar,
   SingleBannerCarousel,
   SingleBannerCarouselX,
+  SubHeader as subheader,
   TitleAndText,
   Video,
 } from '.';
@@ -53,7 +53,6 @@ import { CommerceContextProvider } from './CommerceContext';
 import styles from './App.module.scss';
 import { Meta } from './Meta';
 import { CommerceConfig } from '../src/utils';
-import { BeautyHeader } from './BeautyHeader/BeautyHeader';
 
 interface AppProps {
   configuration: Omit<Configuration, 'httpClient'>;
@@ -93,6 +92,7 @@ export function App({
     SingleBannerCarousel,
     SingleBannerCarouselX,
     SearchBar,
+    subheader,
     TitleAndText,
     Video,
   };
