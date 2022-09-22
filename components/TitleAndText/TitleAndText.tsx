@@ -41,17 +41,27 @@ export function TitleAndText({ component, page }: BrProps<ContainerItem>): React
     text = content.text;
   }
 
-  const { titlesize = 'H3', textalignment = 'center', style = 'style1' } = component.getParameters();
-  const sectionStyle = styles[style];
-
   return (
-    <section className={`${sectionStyle} pt-4 text-${textalignment}`}>
-      {titlesize === 'H1' && <h1 className="mb-2">{title}</h1>}
-      {titlesize === 'H2' && <h2 className="mb-2">{title}</h2>}
-      {titlesize === 'H3' && <h3 className="mb-2">{title}</h3>}
-      {titlesize === 'H4' && <h4 className="mb-2">{title}</h4>}
-      {titlesize === 'H5' && <h5 className="mb-2">{title}</h5>}
-      {text && <div>{text}</div>}
-    </section>
+    <div>
+      <div className="home-pacific-beauty-divider"></div>
+      <div className="home-frame11">
+        <div className="home-frame1057">
+          <div className="home-frame12">
+            <div className="home-contenthub">
+              <span className="home-text005 pacificBeautyDesktopH1Italic">
+                <span>{title}</span>
+              </span>
+            </div>
+            <div className="home-frame14">
+              <span className="home-text007 pacificBeautyDesktopH2">
+                <span className="home-text008">
+                  {text}
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

@@ -59,7 +59,6 @@ export const Banner = React.forwardRef(
             alt={title}
           />
         )}
-
         <Carousel.Caption className={`text-${alignment}`}>
           {title && (
             <h3 className="my-0">
